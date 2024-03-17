@@ -12,6 +12,11 @@ screen = pygame.display.set_mode((W, H))
 # Reloj para controlar la velocidad de actualización del juego
 RELOJ = pygame.time.Clock()
 
+pygame.mixer.init()
+pygame.mixer.music.load('../Sonidos/sonidofondo.mp3')
+pygame.mixer.music.play(-1)
+pygame.mixer.music.set_volume(0.05)
+
 
 def main():
     x = 0
