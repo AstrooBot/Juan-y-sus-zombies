@@ -1,0 +1,20 @@
+@startuml Diagrama
+
+class Game {
+    - FPS: int
+    - x: int
+    - W: int
+    - H: int
+    - screen: Surface
+    - RELOJ: Clock
+
+    + main(): void
+}
+
+class pygame.display.Surface
+class pygame.time.Clock
+
+Game --> "1" pygame.display.Surface: screen
+Game --> "1" pygame.time.Clock: RELOJ
+
+@enduml
