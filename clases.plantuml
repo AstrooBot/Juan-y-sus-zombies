@@ -1,0 +1,32 @@
+@startuml JuegoZombie
+
+class Juego {
+  + main()
+  + pantalla()
+}
+
+class Pantalla {
+  - x: int
+  - background_image: Image
+  + x_relativa()
+  + dibujar()
+  + actualizar()
+}
+
+class Constantes {
+  + Tamaño_pantalla: tuple
+  + FPS: int
+}
+
+class Reloj {
+  + tick(FPS: int)
+}
+
+class Sonido {
+  + init()
+  + cargarMusica(ruta: string)
+  + reproducirMusica(repeticiones: int)
+  + ajustarVolumen(volumen: float)
+}
+
+@enduml
