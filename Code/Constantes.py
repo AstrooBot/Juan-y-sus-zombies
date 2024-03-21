@@ -69,3 +69,5 @@ sword2 = [
     pygame.image.load("../imagenes/swordiz5.png"),
     pygame.image.load("../imagenes/swordiz6.png")
 ]
+
+
