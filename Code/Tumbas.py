@@ -14,7 +14,7 @@ class Tumbas(Sprite):
         Sprite.__init__(self)
         self.contenedor = contenedor
         self.cont = 0
-        self.imagenes = tumba_img1
+        self.imagenes = tumba_img2
         self.imagen = self.imagenes[self.cont]
         self.image = self.imagen
         self.rect = self.image.get_rect()
