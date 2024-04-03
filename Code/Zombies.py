@@ -10,6 +10,12 @@ from Jugador import *
 screen = pygame.display.set_mode(Tamaño_pantalla)
 blanco = (255, 255, 255)
 
+nombres = ["Nicolás Diaz", "Juan Felipe Gil", 
+          "Mathew Rodriguez", "Juan Diaz", 
+          "Eduardo Mariño", "Erick Quiñonez", 
+          "Andrés Chaparro", "Juliana Alzate", 
+          "Juan Diego Céspedes"]
+
 
 class Zombie(Sprite):
     def __init__(self, contenedor):
@@ -44,9 +50,11 @@ def si(juanito, zombies):
     live = 0
     fuente_go = pygame.font.Font(None, 100)
     texto_fin = fuente_go.render("FIN DEL JUEGO", 1, (250, 0, 0))
+    fuente_credito = pygame.font.SysFont("Tahoma", 24)
 
     if random.randint(0, 100) % 20 == 0 and len(zombies) < 3:
         zombies.append(Zombie(Tamaño_pantalla))
+
     for zombie in zombies:
         if juanito.rect.colliderect(zombie.rect):
             zombie.daño_jugador.play()
@@ -67,18 +75,40 @@ def si(juanito, zombies):
                 zombie.muricion.play()
                 juanito.balas.draw(screen)
                 juanito.balas.remove(bala)
+
         for espada in juanito.espadas:
             if zombie.rect.colliderect(espada.rect):
                 zombie.vida -= 50
                 zombie.muricion.play()
                 juanito.espadas.draw(screen)
                 juanito.espadas.remove(espada)
+
         if zombie.vida <= 0:
             screen.blit(zombie.imagen, zombie.rect)
             zombie.muricion.play()
             zombies.remove(zombie)
+
         if juanito.vida <= 0:
-            screen.blit(texto_fin, (200, Tamaño_pantalla[1]/2))
+            screen.blit(texto_fin, (200, Tamaño_pantalla[1]/2 - 50))
+            
+            espacio = 5
+            contador = 0
+
+            for nombre in nombres:
+                texto_credito = fuente_credito.render(nombre, 1, (255, 255, 255))
+                ancho_credito = texto_credito.get_width()
+
+                if contador % 2 == 0:
+                    x = Tamaño_pantalla[0]/2 - ancho_credito + 30
+                else:
+                    x = Tamaño_pantalla[0]/2 + 60
+
+                screen.blit(texto_credito, (x, Tamaño_pantalla[1]/2 + 50 + espacio))
+                contador += 1
+
+                if contador % 2 == 0:
+                    espacio += 30
+
             final = False
             return False
 

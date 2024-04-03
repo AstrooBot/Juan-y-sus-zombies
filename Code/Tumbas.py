@@ -14,7 +14,7 @@ class Tumbas(Sprite):
         Sprite.__init__(self)
         self.contenedor = contenedor
         self.cont = 0
-        self.imagenes = tumba_img2
+        self.imagenes = tumba_img1
         self.imagen = self.imagenes[self.cont]
         self.image = self.imagen
         self.rect = self.image.get_rect()
@@ -47,7 +47,7 @@ def tumPlay(juanito, tumbas, puntos):
 
             if juanito.rect.colliderect(tumba.rect) and tumba.image == tumba_img2[8]:
                 # para sonido de interaccion
-                juanito.vida -= 0.25
+                juanito.vida -= 1
                 tumba.daño_jugador.play()
 
             elif juanito.rect.colliderect(tumba.rect):

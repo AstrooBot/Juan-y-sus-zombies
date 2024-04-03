@@ -26,6 +26,7 @@ def main():
         puntos = 0
         tumbas = []
         final = True
+        
         while 1:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
