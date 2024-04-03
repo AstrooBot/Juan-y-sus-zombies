@@ -21,6 +21,6 @@ El avatar cuenta con un total de dos armas, para poder disparar es necesario usa
  Para poder iniciar la partida, en el fondo se podrá observar un texto indicando la tecla necesaria para poder empezar, en caso de que no sea posible observar dicho texto, oprimir la tecla "Enter" del teclado y atomáticmente el juego dará inicio a la partida.<br>
 
  ### Diagrama en plantUML: <br>
- ![Diagrama en plant UML](out/diagrama/iniciar_juego.png)
+ ![Diagrama en plant UML](iniciar_juego.png)
 
  
