@@ -23,7 +23,7 @@ El avatar cuenta con un total de dos armas, para poder disparar es necesario usa
  ### Diagrama en plantUML: <br>
  ![Diagrama en plant UML](iniciar_juego.png)
 __Integrantes__
-  Mathew Rodriguez 20232020050
+- Mathew Rodriguez 20232020050
 - Juan Diego Céspedes Uribe - 20232020148
 - Nicolas Diaz 20232020059
 - David Felipe Gil Laverde 20232020081
@@ -32,5 +32,7 @@ __Integrantes__
 - María Juliana Alzate Saaavedra 20232020082
 - Juan Sebastian Diaz Peña - 20232020071
 - Andres Felipe Chaparro Mosquera - 20231020140
+- Juan David Avila - 20232020154
+
 
  
